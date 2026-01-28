@@ -1,58 +1,34 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import '../styles/Auth.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // Menambahkan logOut dari AuthContext
-  const { logIn, signUp, logOut } = UserAuth(); 
+  const { logIn } = UserAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e, type) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      if (type === 'login') {
-        // Alur Login: Langsung masuk ke Home
-        await logIn(email, password);
-        navigate('/');
-      } else {
-        // Alur Register: Daftar lalu paksa Logout agar login manual
-        await signUp(email, password);
-        await logOut(); 
-        
-        alert("Registrasi Berhasil, Prajurit! Silakan Login untuk memulai misi.");
-        
-        // Mengosongkan form setelah berhasil daftar
-        setEmail('');
-        setPassword('');
-      }
+      await logIn(email, password);
+      navigate('/');
     } catch (error) {
-      // Menampilkan pesan jika password < 6 karakter atau email tidak valid
-      alert("Gagal! Pastikan email benar dan password min. 6 karakter.");
+      alert("AKSES DITOLAK! Periksa kembali Email Intel dan Passcode kamu.");
     }
   };
 
   return (
     <div className="login-container">
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleLogin}>
         <h2>MISSION <span>ACCESS</span></h2>
-        <input 
-          onChange={(e) => setEmail(e.target.value)} 
-          value={email} // Ditambahkan agar form bisa dikosongkan otomatis
-          type="email" 
-          placeholder="Email Intel" 
-        />
-        <input 
-          onChange={(e) => setPassword(e.target.value)} 
-          value={password} // Ditambahkan agar form bisa dikosongkan otomatis
-          type="password" 
-          placeholder="Passcode" 
-        />
+        <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email Intel" required />
+        <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Passcode" required />
         <div className="auth-buttons">
-          <button onClick={(e) => handleSubmit(e, 'login')} className="btn-login">LOGIN</button>
-          <button onClick={(e) => handleSubmit(e, 'signup')} className="btn-signup">REGISTER</button>
+          <button type="submit" className="btn-login">LOGIN</button>
         </div>
+        <p>Belum punya akses? <Link to="/register">Daftar Rekrutmen</Link></p>
       </form>
     </div>
   );

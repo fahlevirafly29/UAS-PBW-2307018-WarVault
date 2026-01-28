@@ -47,12 +47,23 @@ PowerShell
 npm run dev
 Aplikasi akan berjalan secara default pada alamat: http://localhost:5173.
 
-Tangkapan Layar (Screenshot) Aplikasi
-Berikut adalah dokumentasi antarmuka dari aplikasi WarVault:
+## 📸 Dokumentasi (Screenshots)
 
-1. Halaman Login
-2. Halaman Registrasi Akun
-3. Manajemen Koleksi (The Vault)
+Berikut adalah tampilan antarmuka aplikasi **WARVAULT**:
+
+### 1. Halaman Utama (Katalog Film)
+![Halaman Utama](./ss-halaman utama.png)
+
+### 2. Sistem Akses (Login & Register)
+| Login Page | Register Page |
+|------------|---------------|
+| ![Login](./ss-login.png) | ![Register](./ss-register.png) |
+
+### 3. Koleksi Pribadi (My Vault)
+![My Vault](./ss-vault.png)
+
+### 4. Fitur Update (Edit Note)
+![Edit Note](./ss-edit vault.png)
 
 Tautan
 Live Application (Firebase): https://warvault-uas.web.app

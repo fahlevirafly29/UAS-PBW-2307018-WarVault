@@ -3,7 +3,8 @@ import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Collection from './pages/Collection'; // Import halaman baru
+import Register from './pages/Register'; 
+import Collection from './pages/Collection'; 
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} /> 
             <Route path="/collection" element={<Collection />} /> 
           </Routes>
         </div>
