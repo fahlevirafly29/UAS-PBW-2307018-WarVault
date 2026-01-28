@@ -52,7 +52,7 @@ Aplikasi akan berjalan secara default pada alamat: http://localhost:5173.
 Berikut adalah tampilan antarmuka aplikasi **WARVAULT**:
 
 ### 1. Halaman Utama (Katalog Film)
-![Halaman Utama](./ss-halaman utama.png)
+![Halaman Utama](./ss-halaman-utama.png)
 
 ### 2. Sistem Akses (Login & Register)
 | Login Page | Register Page |
@@ -63,7 +63,7 @@ Berikut adalah tampilan antarmuka aplikasi **WARVAULT**:
 ![My Vault](./ss-vault.png)
 
 ### 4. Fitur Update (Edit Note)
-![Edit Note](./ss-edit vault.png)
+![Edit Note](./ss-edit-vault.png)
 
 Tautan
 Live Application (Firebase): https://warvault-uas.web.app
