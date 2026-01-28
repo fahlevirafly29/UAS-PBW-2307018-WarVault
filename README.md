@@ -68,4 +68,4 @@ Berikut adalah tampilan antarmuka aplikasi **WARVAULT**:
 Tautan
 Live Application (Firebase): https://warvault-uas.web.app
 
-Repository GitHub: UAS-PBW-2307018-WarVault
+Repository GitHub: [UAS-PBW-2307018-WarVault](https://github.com/fahlevirafly29/UAS-PBW-2307018-WarVault)
