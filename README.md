@@ -47,7 +47,7 @@ PowerShell
 npm run dev
 Aplikasi akan berjalan secara default pada alamat: http://localhost:5173.
 
-## 📸 Dokumentasi (Screenshots)
+## Dokumentasi (Screenshots)
 
 Berikut adalah tampilan antarmuka aplikasi **WARVAULT**:
 
